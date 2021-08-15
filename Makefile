@@ -1,5 +1,5 @@
-VOLUME := 'music'
-MOUNT_FROM := ${HOME}/Music
+VOLUME := 'share_sftp'
+MOUNT_FROM := ${HOME}/Downloads
 MOUNT_TO := '/media/music'
 
 CONTAINER_NAME := 'srv-sftp'
@@ -7,7 +7,7 @@ HOST_PORT := 2222
 
 
 build:
-	docker build --no-cache --rm -m 2G --add-host=privoxy:192.168.1.12 -t yvv4docker/srv-sftp -f Dockerfile .
+	docker build --no-cache --rm -m 2G -t yvv4docker/srv-sftp -f Dockerfile .
 
 volume:
 	docker volume create --driver local \
