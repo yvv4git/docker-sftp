@@ -1,6 +1,6 @@
 VOLUME := 'share_sftp'
-MOUNT_FROM := ${HOME}/Downloads
-MOUNT_TO := '/media/music'
+MOUNT_FROM := ${HOME}
+MOUNT_TO := '/media/share'
 
 CONTAINER_NAME := 'srv-sftp'
 HOST_PORT := 2222
